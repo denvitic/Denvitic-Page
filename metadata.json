@@ -1,0 +1,6 @@
+{
+  "name": "Denvitic - Tecnologia que Cresce com o Seu Negócio",
+  "description": "Website institucional da Denvitic - Software house angolana para websites, email corporativo, sistemas sob medida e produtos SaaS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-denvitic-primary: #235347;
+  --color-denvitic-darkest: #051F20;
+  --color-denvitic-dark: #0B2B26;
+  --color-denvitic-deep: #163832;
+  --color-denvitic-sage: #8EB69B;
+  --color-denvitic-mint: #DAF1DE;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom smooth scrolling and scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #8EB69B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #235347;
+}
+
