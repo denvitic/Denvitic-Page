@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denvitic | Software House Angolana - Websites, Email Corporativo e Sistemas de Gestão</title>
+  <meta name="description" content="Denvitic é uma software house angolana em Luanda, especializada em Websites Profissionais, Email Corporativo e Sistemas de Gestão Sob Medida para empresas em Angola." />
+  <link rel="canonical" href="https://denvitic.com/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="img/logo.svg">
+
+  <!-- Open Graph / Facebook, LinkedIn, WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://denvitic.com/" />
+  <meta property="og:site_name" content="Denvitic" />
+  <meta property="og:title" content="Denvitic | Software House Angolana - Tecnologia que Cresce com o Seu Negócio" />
+  <meta property="og:description" content="Websites profissionais, email corporativo e sistemas de gestão sob medida para empresas em Angola. Atendimento local em Luanda." />
+  <meta property="og:image" content="https://denvitic.com/img/denvitic.png" />
+  <meta property="og:locale" content="pt_AO" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Denvitic | Software House Angolana" />
+  <meta name="twitter:description" content="Websites profissionais, email corporativo e sistemas de gestão sob medida para empresas em Angola." />
+  <meta name="twitter:image" content="https://denvitic.com/img/denvitic.png" />
+
+  <!-- Structured Data: diz ao Google e às IAs exatamente quem é a Denvitic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Denvitic",
+    "alternateName": "Denvitic Angola",
+    "url": "https://denvitic.com/",
+    "logo": "https://denvitic.com/img/denvitic.png",
+    "description": "Denvitic é uma software house angolana em Luanda, especializada em websites profissionais, email corporativo e sistemas de gestão sob medida para pequenas e médias empresas em Angola.",
+    "email": "geral@denvitic.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Luanda",
+      "addressCountry": "AO"
+    },
+    "areaServed": "Angola",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#235347',
+              dark: '#051F20',
+              deep: '#0B2B26',
+              light: '#DAF1DE',
+              mint: '#8EB69B',
+              olive: '#163832',
+              bg: '#FAFDFB'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#FAFDFB] text-[#051F20] antialiased selection:bg-[#235347] selection:text-white">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 w-full bg-[#FAFDFB]/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img src="img/denvitic.png" alt="Denvitic Logo" class="h-10 w-10 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105" />
+          <div class="flex flex-col leading-none">
+            <span class="font-heading font-extrabold tracking-tight uppercase text-2xl text-slate-900">
+              DENVITIC
+            </span>
+            <span class="font-medium tracking-wide mt-1 text-[11px] text-[#235347]">
+              Tecnologia que cresce com o seu negócio
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+          <a href="#hero" class="hover:text-[#235347] transition-colors py-2">Início</a>
+          <a href="#sobre" class="hover:text-[#235347] transition-colors py-2">Sobre Nós</a>
+          <a href="#servicos" class="hover:text-[#235347] transition-colors py-2">Serviços</a>
+          <a href="#metodologia" class="hover:text-[#235347] transition-colors py-2">Como Trabalhamos</a>
+          <a href="#contactos" class="hover:text-[#235347] transition-colors py-2">Contactos</a>
+        </nav>
+
+        <!-- CTA Actions -->
+        <div class="hidden lg:flex items-center gap-4">
+          <button
+            onclick="openQuoteModal()"
+            class="btn-shine group relative inline-flex items-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 emerald-glow hover:emerald-glow-lg cursor-pointer active:scale-95"
+          >
+            <i data-lucide="message-square" class="w-4 h-4 text-emerald-300 group-hover:scale-110 transition-transform"></i>
+            <span>Solicitar Orçamento</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden">
+          <button
+            onclick="toggleMobileMenu()"
+            class="p-2.5 rounded-xl text-slate-700 hover:text-[#235347] hover:bg-emerald-50/50 transition-colors cursor-pointer"
+            aria-label="Abrir Menu"
+          >
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="#hero" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">Início</a>
+      <a href="#sobre" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">Sobre Nós</a>
+      <a href="#servicos" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">Serviços</a>
+      <a href="#metodologia" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">Como Trabalhamos</a>
+      <a href="#contactos" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">Contactos</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:text-[#235347] hover:bg-emerald-50 rounded-lg">FAQ</a>
+      <div class="pt-2">
+        <button
+          onclick="toggleMobileMenu(); openQuoteModal()"
+          class="w-full flex items-center justify-center gap-2 bg-[#235347] text-white py-3 rounded-xl font-bold text-sm shadow-sm"
+        >
+          <i data-lucide="message-square" class="w-4 h-4 text-emerald-300"></i>
+          <span>Solicitar Orçamento</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <!-- Subtle Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-200/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Text Column -->
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#235347] uppercase tracking-wider shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-[#235347] animate-pulse"></span>
+            <span>SOFTWARE HOUSE ANGOLANA</span>
+            <span class="text-[#235347]/40">|</span>
+            <span>PRESENÇA & GESTÃO DIGITAL</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#051F20] tracking-tight leading-[1.1]">
+            Sua empresa pronta para o <span class="text-[#235347] underline decoration-emerald-300/80 decoration-wavy decoration-2">futuro digital.</span>
+          </h1>
+
+          <!-- Tagline & Description -->
+          <p class="text-base sm:text-lg lg:text-xl text-[#0B2B26]/80 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            A Denvitic ajuda a sua empresa a nascer e evoluir no mundo digital com websites profissionais, emails corporativos e sistemas de gestão sob medida.
+          </p>
+
+          <!-- Primary Call to Actions -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button
+              onclick="openQuoteModal()"
+              class="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#235347] hover:bg-[#1a3d34] text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 emerald-glow hover:emerald-glow-lg cursor-pointer active:scale-98"
+            >
+              <span>Solicitar Orçamento</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-emerald-300"></i>
+            </button>
+
+            <a
+              href="#servicos"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-[#051F20] border border-slate-200 px-7 py-4 rounded-xl font-semibold text-base transition-all duration-200 shadow-xs cursor-pointer"
+            >
+              <span>Conhecer Nossos Serviços</span>
+            </a>
+          </div>
+
+          <!-- Value Proposition Pills -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left">
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#235347] shrink-0"></i>
+              <span>Email @suaempresa.ao</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#235347] shrink-0"></i>
+              <span>Websites Rápidos & Movéis</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700 col-span-2 sm:col-span-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#235347] shrink-0"></i>
+              <span>Suporte Técnico Local</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Layer Card Stack Preview -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none bg-white p-6 rounded-3xl border border-[#235347]/15 shadow-xl space-y-4">
+            
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-600">
+                  Soluções Integradas Denvitic
+                </span>
+              </div>
+              <span class="text-[10px] font-bold text-[#235347] bg-[#DAF1DE] px-2.5 py-0.5 rounded-full">
+                Para PMEs
+              </span>
+            </div>
+
+            <!-- Card Stack Layer 1: Email Corporativo -->
+            <div 
+              onclick="openQuoteModal('email-corporativo')"
+              class="group bg-[#FAFDFB] hover:bg-[#DAF1DE]/30 border border-[#235347]/20 rounded-xl p-4 transition-all duration-200 cursor-pointer"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-[#235347] text-white">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-[#051F20]">Email Corporativo</h4>
+                    <p class="text-xs text-[#163832]">Domínio .ao / .com</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold uppercase bg-[#235347] text-white px-2 py-0.5 rounded-md">
+                  Disponível
+                </span>
+              </div>
+              <p class="text-xs text-[#0B2B26]/80 line-clamp-2">
+                Garanta credibilidade com emails profissionais oficiais (ex: contacto@suaempresa.ao).
+              </p>
+            </div>
+
+            <!-- Card Stack Layer 2: Websites Institucionais -->
+            <div 
+              onclick="openQuoteModal('websites-profissionais')"
+              class="group bg-[#FAFDFB] hover:bg-[#DAF1DE]/30 border border-[#235347]/20 rounded-xl p-4 transition-all duration-200 cursor-pointer"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-[#163832] text-[#DAF1DE]">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-[#051F20]">Websites Institucionais</h4>
+                    <p class="text-xs text-[#163832]">Presença Digital de Alto Impacto</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold uppercase bg-[#235347] text-white px-2 py-0.5 rounded-md">
+                  Disponível
+                </span>
+              </div>
+              <p class="text-xs text-[#0B2B26]/80 line-clamp-2">
+                Design moderno, otimizado para telemóveis e motores de busca para atrair mais clientes.
+              </p>
+            </div>
+
+            <!-- Card Stack Layer 3: Sistemas Sob Medida -->
+            <div 
+              onclick="openQuoteModal('sistemas-sob-medida')"
+              class="group bg-[#FAFDFB] hover:bg-[#DAF1DE]/30 border border-[#235347]/20 rounded-xl p-4 transition-all duration-200 cursor-pointer"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-[#0B2B26] text-[#DAF1DE]">
+                    <i data-lucide="code" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-[#051F20]">Sistemas Web Sob Medida</h4>
+                    <p class="text-xs text-[#163832]">Plataformas & Automação</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold uppercase bg-[#235347] text-white px-2 py-0.5 rounded-md">
+                  Disponível
+                </span>
+              </div>
+              <p class="text-xs text-[#0B2B26]/80 line-clamp-2">
+                Softwares web e sistemas de gestão desenhados exclusivamente para a rotina e regras do seu negócio.
+              </p>
+            </div>
+
+            <!-- Bottom Callout Badge -->
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-[#163832]">
+              <span class="font-semibold flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#235347]"></i>
+                Suporte Local em Angola
+              </span>
+              <span class="font-bold text-[#235347]">Luanda & Províncias</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- ABOUT SECTION -->
+  <section id="sobre" class="py-20 md:py-28 bg-white border-t border-slate-200/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Text Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-emerald-50 text-[#235347] border border-emerald-100 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+            <span>SOBRE A DENVITIC</span>
+          </div>
+
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#051F20] tracking-tight leading-tight">
+            Engenharia de software com compromisso e identidade local
+          </h2>
+
+          <p class="text-base sm:text-lg text-[#0B2B26]/90 leading-relaxed font-normal">
+            A Denvitic é uma empresa angolana de tecnologia focada na excelência e resultados operacionais reais. Desenvolvemos soluções sólidas para pequenas e médias empresas em Angola — websites institucionais, email corporativo personalizado e sistemas de gestão sob medida — garantindo credibilidade, estabilidade e suporte técnico próximo.
+          </p>
+
+          <div class="p-5 bg-[#FAFDFB] rounded-2xl border-l-4 border-[#235347] shadow-xs space-y-2">
+            <p class="text-sm font-semibold text-[#051F20] italic">
+              "A nossa missão é entregar a tecnologia certa que a sua empresa precisa hoje, permitindo que evolua com segurança a cada nova etapa."
+            </p>
+            <span class="text-xs font-bold text-[#235347] block">— Equipa Denvitic Angola</span>
+          </div>
+
+          <!-- Mission and Vision Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="bg-[#FAFDFB] p-5 rounded-xl border border-[#235347]/10 space-y-2">
+              <div class="flex items-center gap-2 text-[#235347] font-bold text-sm">
+                <i data-lucide="target" class="w-4 h-4"></i>
+                <span>Nossa Missão</span>
+              </div>
+              <p class="text-xs text-[#0B2B26]/80 leading-relaxed">
+                Entregar tecnologia de elevada qualidade a empresas em Angola, oferecendo as ferramentas certas que a sua empresa precisa hoje para crescer com segurança e eficiência.
+              </p>
+            </div>
+
+            <div class="bg-[#FAFDFB] p-5 rounded-xl border border-[#235347]/10 space-y-2">
+              <div class="flex items-center gap-2 text-[#235347] font-bold text-sm">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+                <span>Nossa Visão</span>
+              </div>
+              <p class="text-xs text-[#0B2B26]/80 leading-relaxed">
+                Ser a software house de referência em Angola para empresas que procuram modernização digital, credibilidade e sistemas robustos desenhados para a realidade local.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual / Value Pillars -->
+        <div class="lg:col-span-5">
+          <div class="bg-[#FAFDFB] p-8 rounded-3xl border border-[#235347]/15 shadow-md space-y-6">
+            <h3 class="font-heading text-xl font-bold text-[#051F20] flex items-center gap-2 border-b border-slate-200 pb-4">
+              <i data-lucide="award" class="w-5 h-5 text-[#235347]"></i>
+              <span>Pilares de Atuação</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-[#DAF1DE] text-[#235347] rounded-lg shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-[#051F20]">Transparência Total</h4>
+                  <p class="text-xs text-[#0B2B26]/75">Prazos e custos definidos sem asteriscos ou surpresas.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-[#DAF1DE] text-[#235347] rounded-lg shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-[#051F20]">Qualidade de Código</h4>
+                  <p class="text-xs text-[#0B2B26]/75">Softwares rápidos, seguros e fáceis de evoluir.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-[#DAF1DE] text-[#235347] rounded-lg shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-[#051F20]">Suporte Local Dedicado</h4>
+                  <p class="text-xs text-[#0B2B26]/75">Atendimento em português por especialistas que compreendem Angola.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-[#DAF1DE] text-[#235347] rounded-lg shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-[#051F20]">Foco no Retorno do Negócio</h4>
+                  <p class="text-xs text-[#0B2B26]/75">Projetos orientados a resolver dores reais e gerar receitas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200">
+              <button
+                onclick="openQuoteModal()"
+                class="w-full bg-[#235347] hover:bg-[#1a3d34] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs"
+              >
+                Solicitar Apresentação Institucional
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="servicos" class="py-20 md:py-28 bg-white border-y border-slate-200/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#235347] bg-emerald-50 rounded-md border border-emerald-100">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>NOSSAS SOLUÇÕES</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Soluções de tecnologia feitas para a realidade do seu negócio
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          Comece pelo que o seu negócio precisa hoje — email corporativo com domínio próprio, website profissional ou sistema de gestão sob medida.
+        </p>
+      </div>
+
+      <!-- Filter Category Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button
+          onclick="filterServices('todos')"
+          data-category="todos"
+          class="service-tab bg-[#235347] text-white border-[#235347] px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer"
+        >
+          Todos os Serviços
+        </button>
+        <button
+          onclick="filterServices('comunicacao')"
+          data-category="comunicacao"
+          class="service-tab bg-white text-slate-600 border-slate-200 hover:border-emerald-200 px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer"
+        >
+          Email Corporativo
+        </button>
+        <button
+          onclick="filterServices('presenca')"
+          data-category="presenca"
+          class="service-tab bg-white text-slate-600 border-slate-200 hover:border-emerald-200 px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer"
+        >
+          Websites Institucionais
+        </button>
+        <button
+          onclick="filterServices('sistemas')"
+          data-category="sistemas"
+          class="service-tab bg-white text-slate-600 border-slate-200 hover:border-emerald-200 px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer"
+        >
+          Sistemas Sob Medida
+        </button>
+        <button
+          onclick="filterServices('gestao')"
+          data-category="gestao"
+          class="service-tab bg-white text-slate-600 border-slate-200 hover:border-emerald-200 px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer"
+        >
+          Gestão Comercial & Faturação
+        </button>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Card 1: Email Corporativo -->
+        <div data-category="comunicacao" class="service-card bg-[#FAFDFB] rounded-2xl p-7 border border-slate-200 hover:border-emerald-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="p-3 bg-[#235347] text-white rounded-xl">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-[#235347] font-semibold text-xs px-2.5 py-1 rounded-md border border-emerald-100">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#235347]"></span>
+                Essencial para PMEs
+              </span>
+            </div>
+
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-2">
+                Email Corporativo Personalizado
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Endereços de email profissionais com o domínio da sua empresa (ex: contacto@suaempresa.ao) para transmitir máxima credibilidade aos seus clientes.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200/60">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">O que inclui:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Domínio personalizado .ao ou .com</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Caixas de 10GB a 25GB de espaço</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Configuração em telemóveis e PC</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Proteção Anti-Spam e Vírus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-medium">Ativação + Suporte Anual</span>
+            <button
+              onclick="openQuoteModal('email-corporativo')"
+              class="btn-shine inline-flex items-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer emerald-glow hover:emerald-glow-lg active:scale-95"
+            >
+              <span>Solicitar Orçamento</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Websites Profissionais -->
+        <div data-category="presenca" class="service-card bg-[#FAFDFB] rounded-2xl p-7 border border-slate-200 hover:border-emerald-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="p-3 bg-[#235347] text-white rounded-xl">
+                <i data-lucide="globe" class="w-6 h-6"></i>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-[#235347] font-semibold text-xs px-2.5 py-1 rounded-md border border-emerald-100">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#235347]"></span>
+                Presença Digital
+              </span>
+            </div>
+
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-2">
+                Websites Profissionais & Institucionais
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Presença digital de alto impacto, ultra-rápida e otimizada para telemóveis, desenhada para converter visitantes em clientes reais.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200/60">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">O que inclui:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Design responsivo (Telemóvel & PC)</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Botão WhatsApp e Formulário direto</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Otimização para Google (SEO)</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Alojamento rápido e certificado SSL</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-medium">Projeto Sob Medida</span>
+            <button
+              onclick="openQuoteModal('websites-profissionais')"
+              class="btn-shine inline-flex items-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer emerald-glow hover:emerald-glow-lg active:scale-95"
+            >
+              <span>Solicitar Orçamento</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Sistemas Web Sob Medida -->
+        <div data-category="sistemas" class="service-card bg-[#FAFDFB] rounded-2xl p-7 border border-slate-200 hover:border-emerald-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="p-3 bg-[#235347] text-white rounded-xl">
+                <i data-lucide="code" class="w-6 h-6"></i>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-[#235347] font-semibold text-xs px-2.5 py-1 rounded-md border border-emerald-100">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#235347]"></span>
+                Automação PME
+              </span>
+            </div>
+
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-2">
+                Sistemas & Software Web Sob Medida
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Plataformas web e ferramentas digitais construídas exatamente para a lógica de funcionamento e processos da sua empresa.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200/60">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">O que inclui:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Arquitetura exclusiva para o seu negócio</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Controlo de acessos e permissões</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Relatórios executivos e gráficos</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Formação e documentação da equipa</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-medium">Projeto + Manutenção</span>
+            <button
+              onclick="openQuoteModal('sistemas-sob-medida')"
+              class="btn-shine inline-flex items-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer emerald-glow hover:emerald-glow-lg active:scale-95"
+            >
+              <span>Solicitar Orçamento</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Gestão Comercial -->
+        <div data-category="gestao" class="service-card bg-[#FAFDFB] rounded-2xl p-7 border border-slate-200 hover:border-emerald-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="p-3 bg-[#235347] text-white rounded-xl">
+                <i data-lucide="monitor" class="w-6 h-6"></i>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-[#235347] font-semibold text-xs px-2.5 py-1 rounded-md border border-emerald-100">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#235347]"></span>
+                Gestão de PME
+              </span>
+            </div>
+
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-2">
+                Sistemas de Gestão Comercial & Faturação
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Software de faturação, controlo de stock e gestão comercial otimizado para o mercado e regras fiscais angolanas.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200/60">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">O que inclui:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Emissão rápida de faturas e recibos</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Controlo rigoroso de stock</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Fecho de caixa diário</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Suporte técnico local em Luanda</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between gap-4">
+            <span class="text-xs text-slate-500 font-medium">Licença & Assistência</span>
+            <button
+              onclick="openQuoteModal('sistemas-gestao-desktop')"
+              class="btn-shine inline-flex items-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer emerald-glow hover:emerald-glow-lg active:scale-95"
+            >
+              <span>Solicitar Orçamento</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW WE WORK / METODOLOGIA SECTION -->
+  <section id="metodologia" class="py-20 md:py-28 bg-[#FAFDFB] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#235347] bg-emerald-50 rounded-md border border-emerald-100">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>Processo Transparente</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Como a Denvitic trabalha no seu projeto
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          Metodologia clara e focada em resultados reais. Garantimos comunicação constante e segurança do início à entrega final.
+        </p>
+      </div>
+
+      <!-- 4 Step Process Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-emerald-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-heading text-3xl font-extrabold text-[#235347]/30 group-hover:text-[#235347]/50 transition-colors">01</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#235347] flex items-center justify-center font-bold">
+                <i data-lucide="search" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 group-hover:text-[#235347] transition-colors">
+              Diagnóstico & Alinhamento
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Analisamos em detalhe a realidade do seu negócio, identificando os requisitos reais para o seu website, email ou sistema de gestão.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#235347] bg-emerald-50 px-2.5 py-1 rounded-md">
+              Fase Inicial
+            </span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-emerald-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-heading text-3xl font-extrabold text-[#235347]/30 group-hover:text-[#235347]/50 transition-colors">02</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#235347] flex items-center justify-center font-bold">
+                <i data-lucide="message-square" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 group-hover:text-[#235347] transition-colors">
+              Proposta Transparente
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Apresentamos um plano claro com prazos definidos, escopo bem delimitado e orçamento sem surpresas nem custos ocultos.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#235347] bg-emerald-50 px-2.5 py-1 rounded-md">
+              Alinhamento
+            </span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-emerald-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-heading text-3xl font-extrabold text-[#235347]/30 group-hover:text-[#235347]/50 transition-colors">03</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#235347] flex items-center justify-center font-bold">
+                <i data-lucide="code" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 group-hover:text-[#235347] transition-colors">
+              Desenvolvimento & Testes
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Construímos o software ou website com tecnologia moderna, código otimizado, segurança e testes rigorosos antes da publicação.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#235347] bg-emerald-50 px-2.5 py-1 rounded-md">
+              Construção
+            </span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-emerald-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-heading text-3xl font-extrabold text-[#235347]/30 group-hover:text-[#235347]/50 transition-colors">04</span>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#235347] flex items-center justify-center font-bold">
+                <i data-lucide="rocket" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 group-hover:text-[#235347] transition-colors">
+              Entrega & Suporte Local
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Colocamos a sua solução em produção, prestamos formação à sua equipa e garantimos acompanhamento e assistência contínua.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#235347] bg-emerald-50 px-2.5 py-1 rounded-md">
+              Em Produção
+            </span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Institutional Guarantee Banner -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="p-3 bg-[#235347] text-white rounded-xl shrink-0">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-heading text-lg font-bold text-slate-900">
+              Garantia & Suporte Pós-Venda em Angola
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Todos os nossos serviços contam com suporte dedicado e assistência técnica para garantir o funcionamento contínuo do seu negócio.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onclick="openQuoteModal()"
+          class="bg-[#235347] hover:bg-[#1a3d34] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all duration-200 shrink-0 cursor-pointer shadow-xs active:scale-98"
+        >
+          Falar com a Nossa Equipa
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contactos" class="py-20 md:py-28 bg-white border-t border-slate-200/60 relative overflow-hidden">
+    <!-- Subtle Background Glows -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-80 h-80 bg-[#235347]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-emerald-50 text-[#235347] border border-emerald-100 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="headset" class="w-3.5 h-3.5"></i>
+          <span>CANAIS DE ATENDIMENTO</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#051F20] tracking-tight">
+          Entre em Contacto Directo
+        </h2>
+
+        <p class="text-base sm:text-lg text-[#0B2B26]/80 leading-relaxed font-normal">
+          Estamos prontos para esclarecer as suas dúvidas, analisar o seu projeto ou agendar uma conversa sem qualquer compromisso.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Column: Contact Cards -->
+        <div class="lg:col-span-5 space-y-5">
+          
+          <!-- WhatsApp Card -->
+          <div class="bg-[#FAFDFB] p-6 rounded-2xl border border-emerald-200/80 hover:border-[#235347] transition-all duration-300 shadow-xs hover:shadow-md group">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-[#25D366]/10 text-[#25D366] rounded-2xl shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </div>
+              <div class="space-y-2 flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-heading font-bold text-slate-900 text-lg">WhatsApp Oficial</h3>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Atendimento Rápido
+                  </span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Canal direto para falar com a nossa equipa técnica e obter respostas imediatas.
+                </p>
+                <div class="pt-2">
+                  <a
+                    href="https://wa.me/244923000000?text=Ol%C3%A1%20Denvitic!%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os."
+                    target="_blank"
+                    class="inline-flex items-center gap-2 text-sm font-bold text-[#235347] hover:text-[#1a3d34] group-hover:translate-x-1 transition-all"
+                  >
+                    <span>Falar no WhatsApp</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="bg-[#FAFDFB] p-6 rounded-2xl border border-slate-200/80 hover:border-[#235347] transition-all duration-300 shadow-xs hover:shadow-md group">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-[#235347]/10 text-[#235347] rounded-2xl shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div class="space-y-1.5 flex-1">
+                <h3 class="font-heading font-bold text-slate-900 text-lg">Email Geral</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Para propostas formais, envio de especificações de software ou documentos.
+                </p>
+                <a href="mailto:geral@denvitic.com" class="inline-block pt-1 font-heading font-bold text-sm text-[#235347] hover:underline">
+                  geral@denvitic.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coverage Card -->
+          <div class="bg-[#FAFDFB] p-6 rounded-2xl border border-slate-200/80 space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-slate-100 text-slate-700 rounded-2xl shrink-0">
+                <i data-lucide="globe-2" class="w-6 h-6"></i>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-slate-900 text-base">Atendimento & Operação</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Luanda, Angola — Atendemos clientes em todo o território nacional através de processos 100% digitais, seguros e acompanhamento próximo.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-[#235347]"></i>
+                Segunda a Sábado: 08h00 – 18h00
+              </span>
+              <span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100">Disponível</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Form Card -->
+        <div class="lg:col-span-7">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl space-y-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#235347]/5 rounded-bl-full pointer-events-none"></div>
+
+            <div class="space-y-1">
+              <h3 class="font-heading font-bold text-2xl text-[#051F20]">Envie uma Mensagem</h3>
+              <p class="text-xs sm:text-sm text-slate-600">Preencha o formulário e a nossa equipa responderá em breve.</p>
+            </div>
+
+            <form onsubmit="event.preventDefault();" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Seu Nome *</label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    placeholder="Ex: Manuel Silva"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">WhatsApp / Telefone *</label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    placeholder="Ex: 923 000 000"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Email Corporativo</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    placeholder="Ex: manuel@empresa.ao"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Assunto</label>
+                  <select
+                    id="contact-subject"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50 text-slate-700"
+                  >
+                    <option value="Dúvida Geral">Dúvida Geral</option>
+                    <option value="Email Corporativo">Email Corporativo Personalizado</option>
+                    <option value="Website Profissional">Website Profissional / Institucional</option>
+                    <option value="Software Sob Medida">Software / Sistema Sob Medida</option>
+                    <option value="Gestão Comercial">Sistema de Gestão Comercial</option>
+                    <option value="Outro">Outro Assunto</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Sua Mensagem</label>
+                <textarea
+                  id="contact-message"
+                  rows="4"
+                  placeholder="Descreva resumidamente o que a sua empresa precisa..."
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50"
+                ></textarea>
+              </div>
+
+              <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  onclick="submitDirectContact('whatsapp')"
+                  class="btn-shine w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-bold text-sm transition-all cursor-pointer shadow-sm hover:shadow-md active:scale-98"
+                >
+                  <i data-lucide="message-square" class="w-4 h-4"></i>
+                  <span>Enviar por WhatsApp</span>
+                </button>
+
+                <button
+                  type="button"
+                  onclick="submitDirectContact('email')"
+                  class="btn-shine w-full inline-flex items-center justify-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white py-3.5 rounded-xl font-bold text-sm transition-all cursor-pointer shadow-sm hover:shadow-md active:scale-98"
+                >
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Enviar por Email</span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 md:py-28 bg-[#FAFDFB] relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-4">
+        <div class="inline-flex items-center gap-2 bg-emerald-50 text-[#235347] border border-emerald-100 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Tire Suas Dúvidas</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#051F20] tracking-tight">
+          Perguntas Frequentes
+        </h2>
+
+        <p class="text-base text-[#0B2B26]/80 leading-relaxed">
+          Respostas claras para as principais dúvidas sobre os nossos serviços e modelos de trabalho.
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="space-y-4">
+
+        <!-- Question 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(1)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>1. Quanto tempo demora para ter o meu Email Corporativo a funcionar?</span>
+            <i id="faq-icon-1" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-1" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            A ativação do email corporativo é extremamente rápida. Após a confirmação dos dados do seu domínio, as caixas de correio eletrónico são configuradas e disponibilizadas entre 24 a 48 horas úteis, prontas para serem sincronizadas nos seus telemóveis e computadores.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(2)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>2. A Denvitic ajuda no registo de domínios com extensão .ao ou .com?</span>
+            <i id="faq-icon-2" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-2" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            Sim! Tratamos de todo o processo burocrático e técnico para registar o seu domínio oficial (.ao nacional ou .com internacional). Cuidamos das DNS, renovações anuais e ligação direta aos seus emails e website.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(3)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>3. Qual é a diferença entre um website genérico e um website feito pela Denvitic?</span>
+            <i id="faq-icon-3" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-3" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            Os nossos websites não são modelos prontos e genéricos. Projetamos a arquitetura de informação, o design responsivo e a velocidade de carregamento com foco no público e mercado angolano. Além disso, entregamos integração direta com o seu WhatsApp e otimização para motores de busca (SEO).
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(4)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>4. Como funcionam os pagamentos dos serviços?</span>
+            <i id="faq-icon-4" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-4" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            Trabalhamos com pagamentos transparentes em Kwanzas (AOA) via transferência bancária (Multicaixa / IBAN). Para desenvolvimento de projetos (websites e sistemas sob medida), dividimos habitualmente o pagamento por fases (Sinal + Entrega). Para emails e sistemas de gestão, oferecemos modalidades anuais com descontos especiais.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(5)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>5. O sistema de gestão comercial precisa de internet para funcionar?</span>
+            <i id="faq-icon-5" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-5" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            Disponibilizamos ambas as soluções. O nosso software desktop de gestão comercial pode operar em rede local na sua loja sem depender da internet para faturar ou controlar o stock. Também desenvolvemos plataformas em nuvem para acesso remoto se essa for a preferência do seu negócio.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onclick="toggleFaq(6)"
+            class="w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-[#235347] transition-colors cursor-pointer"
+          >
+            <span>6. Onde fica localizada a Denvitic e como é prestado o suporte técnico?</span>
+            <i id="faq-icon-6" data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#235347] shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div id="faq-answer-6" class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            Somos uma software house sediada em Luanda, Angola. Prestamos suporte técnico direto por WhatsApp, telefone, email e assistência remota rápida. Para projetos corporativos e empresas locais, também realizamos reuniões e intervenções presenciais.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#051F20] text-slate-300 pt-16 pb-12 border-t border-[#163832]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="img/denvitic.png" alt="Denvitic Logo" class="h-10 w-10 shrink-0 object-contain" />
+            <div class="flex flex-col leading-none">
+              <span class="font-heading font-extrabold tracking-tight uppercase text-2xl text-white">
+                DENVITIC
+              </span>
+              <span class="font-medium tracking-wide mt-1 text-[11px] text-emerald-200">
+                Tecnologia que cresce com o seu negócio
+              </span>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-300/80 leading-relaxed max-w-sm">
+            Software house angolana dedicada a modernizar a presença e eficiência digital de empresas em Angola através de websites profissionais, emails corporativos e sistemas sob medida.
+          </p>
+
+          <div class="pt-2 flex items-center gap-3">
+            <a href="https://wa.me/244923000000" target="_blank" class="p-2 bg-[#163832] hover:bg-[#235347] text-white rounded-lg transition-colors" aria-label="WhatsApp">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:geral@denvitic.com" class="p-2 bg-[#163832] hover:bg-[#235347] text-white rounded-lg transition-colors" aria-label="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-heading font-bold text-white text-base">Navegação</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#hero" class="hover:text-white transition-colors">Início</a></li>
+            <li><a href="#servicos" class="hover:text-white transition-colors">Nossos Serviços</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors">Como Trabalhamos</a></li>
+            <li><a href="#sobre" class="hover:text-white transition-colors">Sobre a Denvitic</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Perguntas Frequentes (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacts -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="font-heading font-bold text-white text-base">Contacto & Suporte</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+              <div>
+                <a href="mailto:geral@denvitic.com" class="hover:text-white block">geral@denvitic.com</a>
+                <a href="mailto:geral@denvitic.com" class="hover:text-white text-xs text-slate-400 block">geral@denvitic.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+              <div>
+                <a href="https://wa.me/244923000000" target="_blank" class="hover:text-white block">+244 923 000 000 (WhatsApp)</a>
+                <span class="text-xs text-slate-400 block">Atendimento: Seg - Sáb | 08:00 - 18:00</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 mt-1 shrink-0"></i>
+              <span class="text-slate-300">Luanda, Angola</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-8 border-t border-[#163832] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 DENVITIC. Todos os direitos reservados. Feito em Angola.</p>
+        <p class="flex items-center gap-1">
+          <span>Tecnologia que cresce com o seu negócio.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUOTE MODAL -->
+  <div id="quote-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden modal-content">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-[#051F20] via-[#0B2B26] to-[#051F20] text-white p-6 relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl"></div>
+        <div class="relative z-10 flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="p-2.5 bg-[#235347] rounded-xl text-emerald-300 shadow-inner">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-xl text-white">Solicitar Orçamento Gratuito</h3>
+              <p class="text-xs text-emerald-200/90 mt-0.5">Proposta transparente e personalizada para o seu negócio em Angola</p>
+            </div>
+          </div>
+
+          <button
+            onclick="closeQuoteModal()"
+            class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-all cursor-pointer"
+            aria-label="Fechar"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body Form -->
+      <div class="p-6 sm:p-8 space-y-5">
+        
+        <!-- Interactive Service Selection Chips -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2.5">
+            1. Selecione o Serviço Desejado:
+          </label>
+          <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+            <button
+              type="button"
+              onclick="selectModalService('email-corporativo')"
+              data-value="email-corporativo"
+              class="service-chip p-3 rounded-xl border text-left transition-all flex items-center gap-2 cursor-pointer bg-[#235347] text-white border-[#235347]"
+            >
+              <i data-lucide="mail" class="w-4 h-4 shrink-0"></i>
+              <span>Email Corporativo</span>
+            </button>
+
+            <button
+              type="button"
+              onclick="selectModalService('websites-profissionais')"
+              data-value="websites-profissionais"
+              class="service-chip p-3 rounded-xl border text-left transition-all flex items-center gap-2 cursor-pointer bg-slate-100 text-slate-700 border-slate-200 hover:border-emerald-300"
+            >
+              <i data-lucide="globe" class="w-4 h-4 shrink-0"></i>
+              <span>Website Profissional</span>
+            </button>
+
+            <button
+              type="button"
+              onclick="selectModalService('sistemas-sob-medida')"
+              data-value="sistemas-sob-medida"
+              class="service-chip p-3 rounded-xl border text-left transition-all flex items-center gap-2 cursor-pointer bg-slate-100 text-slate-700 border-slate-200 hover:border-emerald-300"
+            >
+              <i data-lucide="code" class="w-4 h-4 shrink-0"></i>
+              <span>Sistema Sob Medida</span>
+            </button>
+
+            <button
+              type="button"
+              onclick="selectModalService('sistemas-gestao-desktop')"
+              data-value="sistemas-gestao-desktop"
+              class="service-chip p-3 rounded-xl border text-left transition-all flex items-center gap-2 cursor-pointer bg-slate-100 text-slate-700 border-slate-200 hover:border-emerald-300"
+            >
+              <i data-lucide="monitor" class="w-4 h-4 shrink-0"></i>
+              <span>Gestão Comercial</span>
+            </button>
+          </div>
+
+          <!-- Hidden Native Select for fallback -->
+          <select id="modal-service" class="sr-only">
+            <option value="email-corporativo">Email Corporativo Personalizado (@suaempresa.ao)</option>
+            <option value="websites-profissionais">Websites Profissionais & Institucionais</option>
+            <option value="sistemas-sob-medida">Sistemas & Software Web Sob Medida</option>
+            <option value="sistemas-gestao-desktop">Sistemas de Gestão Comercial & Faturação</option>
+            <option value="outro">Outra Solução / Parceria</option>
+          </select>
+        </div>
+
+        <!-- Contact Fields -->
+        <div class="space-y-3 pt-1">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">
+            2. Seus Dados de Contacto:
+          </label>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <input id="modal-name" type="text" placeholder="Seu Nome *" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50" />
+            </div>
+
+            <div>
+              <input id="modal-company" type="text" placeholder="Nome da Empresa" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <input id="modal-phone" type="tel" placeholder="WhatsApp / Telefone *" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50" />
+            </div>
+
+            <div>
+              <input id="modal-email" type="email" placeholder="Email Corporativo" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50" />
+            </div>
+          </div>
+
+          <div>
+            <textarea id="modal-message" rows="2" placeholder="Descreva sucintamente o que precisa (opcional)..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#235347] transition-all bg-slate-50/50"></textarea>
+          </div>
+        </div>
+
+        <!-- Guarantee Badge -->
+        <div class="flex items-center gap-2 p-3 rounded-xl bg-emerald-50/80 border border-emerald-100/80 text-xs text-[#235347] font-medium">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+          <span>A resposta é enviada diretamente pela nossa equipa em até 2 horas úteis.</span>
+        </div>
+
+        <!-- Submit Buttons -->
+        <div class="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button
+            type="button"
+            onclick="submitQuote('whatsapp')"
+            class="btn-shine w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-bold text-sm transition-all cursor-pointer shadow-sm hover:shadow-md active:scale-98"
+          >
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Enviar por WhatsApp</span>
+          </button>
+
+          <button
+            type="button"
+            onclick="submitQuote('email')"
+            class="btn-shine w-full inline-flex items-center justify-center gap-2 bg-[#235347] hover:bg-[#1a3d34] text-white py-3.5 rounded-xl font-bold text-sm transition-all cursor-pointer shadow-sm hover:shadow-md active:scale-98"
+          >
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Enviar por Email</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    href="https://wa.me/244923000000?text=Ol%C3%A1%20Denvitic!%20Gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20servi%C3%A7os."
+    target="_blank"
+    class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group active:scale-95"
+    aria-label="Falar no WhatsApp"
+  >
+    <i data-lucide="phone-call" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold text-xs pl-0 group-hover:pl-2">
+      Falar no WhatsApp
+    </span>
+  </a>
+
+  <!-- JS Logic -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
